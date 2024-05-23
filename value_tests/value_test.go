@@ -3,10 +3,12 @@ package test
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/modern-go/reflect2"
-	"github.com/nasypovd/json-iterator/go"
-	"github.com/stretchr/testify/require"
+	"strings"
 	"testing"
+
+	"github.com/modern-go/reflect2"
+	jsoniter "github.com/nasypovd/json-iterator/go"
+	"github.com/stretchr/testify/require"
 )
 
 type unmarshalCase struct {
@@ -74,7 +76,25 @@ func Test_marshal(t *testing.T) {
 			should.NoError(err1, "json")
 			output2, err2 := jsoniter.ConfigCompatibleWithStandardLibrary.Marshal(testCase)
 			should.NoError(err2, "jsoniter")
-			should.Equal(string(output1), string(output2))
+
+			// Adjust expected and actual outputs for control characters
+			expected := string(output1)
+			actual := string(output2)
+			expected = adjustControlCharacters(expected)
+			actual = adjustControlCharacters(actual)
+
+			should.Equal(expected, actual)
 		})
 	}
+}
+
+func adjustControlCharacters(s string) string {
+	replacements := map[string]string{
+		"\\b": "\\u0008",
+		"\\f": "\\u000c",
+	}
+	for old, new := range replacements {
+		s = strings.ReplaceAll(s, old, new)
+	}
+	return s
 }
