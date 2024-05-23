@@ -2,7 +2,7 @@ package test
 
 import (
 	"bytes"
-	"github.com/json-iterator/go"
+	"github.com/nasypovd/json-iterator/go"
 	"testing"
 )
 

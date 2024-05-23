@@ -3,7 +3,7 @@ package test
 import (
 	"bytes"
 	"fmt"
-	"github.com/json-iterator/go"
+	"github.com/nasypovd/json-iterator/go"
 	"github.com/stretchr/testify/require"
 	"strconv"
 	"testing"
