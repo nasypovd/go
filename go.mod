@@ -1,4 +1,4 @@
-module github.com/nasypovd/json-iterator/go
+module github.com/nasypovd/go
 
 go 1.22
 

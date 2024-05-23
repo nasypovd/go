@@ -2,10 +2,11 @@ package misc_tests
 
 import (
 	"encoding/json"
-	"github.com/nasypovd/json-iterator/go"
 	"reflect"
 	"strings"
 	"testing"
+
+	jsoniter "github.com/nasypovd/go"
 )
 
 type Level1 struct {

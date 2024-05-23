@@ -1,13 +1,14 @@
 package test
 
 import (
-	"github.com/modern-go/reflect2"
-	"github.com/nasypovd/json-iterator/go"
-	"github.com/stretchr/testify/require"
 	"reflect"
 	"strconv"
 	"testing"
 	"unsafe"
+
+	"github.com/modern-go/reflect2"
+	jsoniter "github.com/nasypovd/go"
+	"github.com/stretchr/testify/require"
 )
 
 type TestObject1 struct {

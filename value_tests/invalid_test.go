@@ -3,11 +3,12 @@ package test
 import (
 	"bytes"
 	"encoding/json"
-	"github.com/nasypovd/json-iterator/go"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 	"io"
 	"testing"
+
+	jsoniter "github.com/nasypovd/go"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 func Test_missing_object_end(t *testing.T) {

@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/modern-go/reflect2"
-	jsoniter "github.com/nasypovd/json-iterator/go"
+	jsoniter "github.com/nasypovd/go"
 	"github.com/stretchr/testify/require"
 )
 

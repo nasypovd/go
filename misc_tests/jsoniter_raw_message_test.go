@@ -2,10 +2,11 @@ package misc_tests
 
 import (
 	"encoding/json"
-	"github.com/nasypovd/json-iterator/go"
-	"github.com/stretchr/testify/require"
 	"strings"
 	"testing"
+
+	jsoniter "github.com/nasypovd/go"
+	"github.com/stretchr/testify/require"
 )
 
 func Test_jsoniter_RawMessage(t *testing.T) {

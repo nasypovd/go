@@ -2,10 +2,11 @@ package misc_tests
 
 import (
 	"encoding/json"
-	"github.com/nasypovd/json-iterator/go"
-	"github.com/stretchr/testify/require"
 	"io"
 	"testing"
+
+	jsoniter "github.com/nasypovd/go"
+	"github.com/stretchr/testify/require"
 )
 
 func Test_nil_non_empty_interface(t *testing.T) {

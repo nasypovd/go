@@ -1,9 +1,10 @@
 package extra
 
 import (
-	"github.com/nasypovd/json-iterator/go"
 	"time"
 	"unsafe"
+
+	jsoniter "github.com/nasypovd/go"
 )
 
 // RegisterTimeAsInt64Codec encode/decode time since number of unit since epoch. the precision is the unit.

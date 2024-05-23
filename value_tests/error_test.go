@@ -1,10 +1,11 @@
 package test
 
 import (
-	"github.com/nasypovd/json-iterator/go"
-	"github.com/stretchr/testify/require"
 	"reflect"
 	"testing"
+
+	jsoniter "github.com/nasypovd/go"
+	"github.com/stretchr/testify/require"
 )
 
 func Test_errorInput(t *testing.T) {

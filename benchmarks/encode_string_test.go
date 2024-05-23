@@ -2,8 +2,9 @@ package test
 
 import (
 	"bytes"
-	"github.com/nasypovd/json-iterator/go"
 	"testing"
+
+	jsoniter "github.com/nasypovd/go"
 )
 
 func Benchmark_encode_string_with_SetEscapeHTML(b *testing.B) {
